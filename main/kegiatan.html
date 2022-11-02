@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="shortcut icon" href="./asset/favicon.ico" type="image/x-icon">
+
+  <link rel=preconnect href=https://fonts.googleapis.com>
+  <link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+  <link href=https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap rel=stylesheet>
+
+  <link rel=stylesheet href=./fonts/hmti-fonticons.css>
+  <link rel="stylesheet" href=./kegiatan.css>
+
+  <title>Kegiatan</title>
+</head>
+<body>
+  <header>
+    <span class=logo>
+      <img src=./asset/hmti_logo.png alt=hmti_logo>
+    </span>
+    <nav class=menu>
+      <ul class=menu-items>
+        <li class=menu-item>
+          <a href=./home.html class="home-menu">Home</a>
+        </li>
+        <li class=menu-item>
+          <a href=./home.html#profil class=profil-menu>Profil</a>
+        </li>
+        <li class=menu-item>
+          <a href=berita.html class=berita-menu>Berita</a>
+        </li>
+        <li class="menu-item dropdown">
+          <span class="kegiatan-menu dropdown-trigger"> Kegiatan <i class="hf caret-down"></i> </span>
+          <ul class="dropdown-menu kegiatan-menu">
+            <li class="dropdown-item skill-class">
+              <a href=#skill-class>HMTI Skill Class</a>
+            </li>
+            <li class="dropdown-item hmti-fun">
+              <a href=#hmti-fun>HMTI Fun</a>
+            </li>
+            <li class="dropdown-item march-event">
+              <a href=#march-event>March Event</a>
+            </li>
+            <li class="dropdown-item it-expo">
+              <a href=#it-expo>IT Expo</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-item dropdown">
+          <span class="projects-menu dropdown-trigger"> Projects <i class="hf caret-down"></i> </span>
+          <ul class="dropdown-menu projects-menu">
+            <li class="dropdown-item ai-project">
+              <a href=./home.html#keterampilan>Artificial Intelligence</a>
+            </li>
+            <li class="dropdown-item iot-project">
+              <a href=./home.html#keterampilan>Internet of Things</a>
+            </li>
+            <li class="dropdown-item gis-project">
+              <a href=./home.html#keterampilan>Geographic Information System</a>
+            </li>
+            <li class="dropdown-item troubleshooting-project">
+              <a href=./home.html#keterampilan>Troubleshooting</a>
+            </li>
+            <li class="dropdown-item mobile-dev-project">
+              <a href=./home.html#keterampilan>Mobile App Development</a>
+            </li>
+            <li class="dropdown-item networking-project">
+              <a href=./home.html#keterampilan>Network Engineering</a>
+            </li>
+            <li class="dropdown-item web-dev-project">
+              <a href=./home.html#keterampilan>Web Development</a>
+            </li>
+          </ul>
+        </li>
+        <li class=menu-item>
+          <a href=arsip.html class=arsip-menu>Arsip</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <section class="skill-class hmti-event" id=skill-class>
+    <div class="hero-background">
+      <div class="hero-img">
+        <img src=./asset/skill-class-img.jpg alt="">
+      </div>
+    </div>
+    <div class="section-overlay">
+      <div class="events-text">
+        <h1 class="section-title">Skill Class</h1>
+        <p class="section-text">
+          Kegiatan belajar bersama dengan sistem sharing oleh HMTI yang membahas
+          tentang keahlian tingkat dasar hingga mahir terkait Teknologi
+          Informasi. Meningkatkan pengetahuan dan keterampilan anggota HMTI
+          dalam profesionalitas bidang Teknologi Informasi.
+        </p>
+        <a href="#" class=section-cta><button class=cta-btn>Selengkapnya &LongRightArrow; </button></a>
+      </div>
+      <div class="events-image">
+        <img src=./asset/skill-class-img.jpg alt=skill-class-image loading=lazy>
+      </div>
+    </div>
+  </section>
+  <section class="hmti-fun hmti-event" id=hmti-fun>
+    <div class="hero-background">
+      <div class="hero-img">
+        <img src=./asset/hmti-fun-img.jpg alt="">
+      </div>
+    </div>
+    <div class="section-overlay">
+      <div class="events-image">
+        <img src=./asset/hmti-fun-img.jpg alt=hmti-fun-image loading=lazy>
+      </div>
+      <div class="events-text">
+        <h1 class="section-title">HMTI Fun</h1>
+        <p class="section-text">
+          Tidak selalu di depan komputer, kadang kita butuh bersenang-senang. 
+          Karena itu HMTI menyediakan HMTI Fun sebagai sarana untuk melakukan kegiatan di luar 
+          IT seperti Futsal dan E-Sport.
+        </p>
+        <a href="#" class=section-cta><button class=cta-btn>Selengkapnya &LongRightArrow; </button></a>
+      </div>
+    </div>
+  </section>
+  <section class="march-event hmti-event" id=march-event>
+    <div class="hero-background">
+      <div class="hero-img">
+        <img src=./asset/march-event-img.jpg alt="">
+      </div>
+    </div>
+    <div class="section-overlay">
+      <div class="events-text">
+        <h1 class="section-title">March Event</h1>
+        <p class="section-text">
+          HMTI mengadakan kegiatan tahunan bertajuk 'March Event' yang di dalamnya diadakan
+          beberapa mata lomba terkait IT dengan tujuan meningkatkan kompetisi dan daya saing
+          para pelajar dan mahasiswa demi peningkatan kualitas Sumber Daya Manusia.
+        </p>
+        <a href="#" class=section-cta><button class=cta-btn>Selengkapnya &LongRightArrow; </button></a>
+      </div>
+      <div class="events-image">
+        <img src=./asset/march-event-img.jpg alt=march-event-image loading=lazy>
+      </div>
+    </div>
+  </section>
+  <section class="it-expo hmti-event" id=it-expo>
+    <div class="hero-background">
+      <div class="hero-img">
+        <img src=./asset/it-expo-img.jpg alt="">
+      </div>
+    </div>
+    <div class="section-overlay">
+      <div class="events-image">
+        <img src=./asset/it-expo-img.jpg alt=skill-class-image loading=lazy>
+      </div>
+      <div class="events-text">
+        <h1 class="section-title">IT Expo</h1>
+        <p class="section-text">
+          Expo sebagai ajang untuk memamerkan inovasi oleh para mahasiswa 
+          Teknik Informatika Universitas Khairun. Sebagai sarana sosialisasi
+          produk-produk IT sekaligus tolak ukur kualitas Sumber Daya Manusia HMTI.
+        </p>
+        <a href="#" class=section-cta><button class=cta-btn>Selengkapnya &LongRightArrow; </button></a>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <section class="about cards">
+      <div class="profil card">
+        <div class="logo">
+          <img height=120 src=./asset/hmti_logo.png alt=hmti_logo>
+        </div>
+        <div class="information">
+          <div class="sekretariat">
+            <h4 class="title">Sekretariat:</h4>
+            <p class="text">Jl. Jati Metro, Kampus 3 Unkhair, Kelurahan Jati, Ternate Selatan, Kota Ternate</p>
+          </div>
+          <div class="email">
+            <h4 class="title">Email:</h4>
+            <p class="text">hmtiunkhair@gmail.com</p>
+          </div>
+          <div class="website">
+            <h4 class="title">Website:</h4>
+            <a href=# class="text">www.hmtiunkhair.org</a>
+          </div>
+        </div>
+      </div>
+      <div class="terkait card">
+        <h3 class=card-title>Terkait</h3>
+        <div class="card-body">
+          <p>Terkait Kami:</p>
+          <div class="items">
+            <div class="item">
+              <strong>Universitas Khairun</strong>
+              <a href=https://unkhair.ac.id/ target=_blank>www.unkhair.ac.id</a>
+            </div>
+            <div class="item">
+              <strong>Fakultas Teknik Universitas Khairun</strong>
+              <a href=https://ft.unkhair.ac.id/ target=_blank>www.ft.unkhair.ac.id</a>
+            </div>
+            <div class="item">
+              <strong>Prodi Informatika Universitas Khairun</strong>
+              <a href=https://if.unkhair.ac.id/ target=_blank>www.if.unkhair.ac.id</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="medsos card">
+        <h3 class="card-title">Media Sosial</h3>
+        <div class="card-body">
+          <p>Ikuti media sosial kami untuk informasi 
+            terbaru seputar kegiatan kami.</p>
+          
+          <div class="items">
+            <div class="item">
+              <a href=https://instagram.com/hmti_unkhair/ target=_blank >
+                <i class="hf instagram-icon"></i>
+              </a>
+            </div>
+            <div class="item">
+              <a href=https://facebook.com/hmtiunkhair/ target=_blank >
+                <i class="hf facebook-icon"></i>
+              </a>
+            </div>
+            <div class="item">
+              <a href=https://instagram.com/hmti_unkhair/ target=_blank >
+                <i class="hf twitter-icon"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <span class=copyright>
+      <span class=copy-icon>&copy;</span><span class=copy-text>2022 Himpunan Mahasiswa Teknik Informatika Universitas Khairun. All Right Reserved. Hak Cipta HMTI Unkhair.</span>
+    </span>
+  </footer>
+</body>
+</html>

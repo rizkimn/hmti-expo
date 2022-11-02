@@ -1,0 +1,464 @@
+:root {
+  --primary-white: #ffffff;
+  --secondary-blue: #3F79E9;
+  --secondary-lightblue: #F0F5FD;
+  --ternary-grey: #485E88;
+}
+
+* {
+  font-family: 'Poppins', 'Montserrat', Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+header {
+  background-color: var(--primary-white);
+  position: fixed;
+  z-index: 666;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  padding: 0 100px;
+}
+
+header span.logo img {
+  height: 50px;
+}
+
+header nav.menu {
+  font-size: 14px;
+}
+
+header nav.menu ul.menu-items {
+  display: flex;
+  list-style: none;
+}
+
+header nav.menu ul.menu-items li.menu-item > a,
+header nav.menu ul.menu-items li.menu-item > span {
+  position: relative;
+  padding: 0 15px;
+  line-height: 50px;
+  text-decoration: none;
+  color: var(--secondary-blue);
+  cursor: default;
+}
+
+header nav.menu ul.menu-items li.menu-item > a {
+  display: inline-block;
+  height: 50px;
+}
+
+header nav.menu ul.menu-items li.menu-item > a::after {
+  content: "";
+  background-color: var(--secondary-blue);
+  position: absolute;
+  top: 100%; left: 50%;
+  transform-origin: center;
+  transform: translateX(-50%);
+  height: 1px;
+  width: 0;
+  transition: .3s;
+}
+
+header nav.menu ul.menu-items li.menu-item > a:hover::after,
+header nav.menu ul.menu-items li.menu-item > a.active::after {
+  width: 50%;
+}
+
+header nav.menu li.dropdown {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+header nav.menu li.dropdown ul.dropdown-menu {
+  background-color: var(--primary-white);
+  position: absolute;
+  top: 100%; right: 0;
+  width: 250px;
+  padding: 20px;
+  box-shadow: #0000001e 0px 4px 12px;
+  transform-origin: top;
+  transform: scaleY(0);
+  opacity: 0;
+  transition: .3s;
+}
+
+header nav.menu li.dropdown ul.dropdown-menu.kegiatan-menu {
+  width: 200px;
+}
+
+header nav.menu li.dropdown ul.dropdown-menu.projects-menu {
+  width: 300px;
+}
+
+header nav.menu li.dropdown:hover ul.dropdown-menu {
+  transform: scaleY(1);
+  opacity: 1;
+}
+
+header nav.menu li.dropdown span i {
+  transform-origin: center;
+  transition: .3s;
+}
+
+header nav.menu li.dropdown:hover span i {
+  transform: rotateX(-180deg)
+}
+
+header nav.menu ul.dropdown-menu li.dropdown-item a {
+  color: var(--secondary-blue);
+  line-height: 28px;
+  text-decoration: none;
+}
+
+header nav.menu ul.dropdown-menu li.dropdown-item {
+  background-color: #ffffff;
+  color: var(--secondary-blue);
+  border-radius: 6px;
+  padding: 4px 8px;
+}
+
+header nav.menu ul.dropdown-menu li.dropdown-item:hover {
+  background-color: var(--secondary-blue);
+}
+
+header nav.menu ul.dropdown-menu li.dropdown-item:hover a {
+  color: #ffffff;
+}
+
+section.container {
+  padding: 100px;
+}
+
+section.home {
+  position:relative;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+section.home .hero .hero-background img {
+  width: 100%;
+}
+
+section.home .hero .hero-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #446e95d2;
+}
+
+section.home .hero .home-content {
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-content .content-logo img {
+  width: 150px;
+}
+
+.home-content .content-text {
+  margin: 35px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.home-content .welcome-text h1,
+.home-content .welcome-text h2 {
+  /* position: absolute; */
+  line-height: 35px;
+  font-size: 26px;
+  font-weight: 400;
+  text-align: center;
+  font-family: 'Courier Prime', 'Courier New', monospace;
+}
+
+.home-content .content-text h1 {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.home-content .content-cta button.cta-btn {
+  position: relative;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #ffffff;
+  color: var(--secondary-blue);
+  padding: 8px 21px;
+  border: 1px solid var(--secondary-blue);
+  border-radius: 1px;
+  box-shadow: #ffffff 0 0 0 0;
+  transition: .3s;
+}
+
+.home-content .content-cta button.cta-btn:hover {
+  box-shadow: #ffffff -4px 4px 0 0;
+  transform: translate(4px, -4px);
+}
+
+
+section.container .content-title h2 {
+  display: inline;
+  position: relative;
+  font-family: 'Courier Prime', 'Courier New', Courier, monospace;
+  font-size: 28px;
+  line-height: 60px;
+}
+
+section.container .content-title h2::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 100%;
+}
+
+section.container p {
+  color: var(--ternary-grey);
+}
+
+section .content-title h2::after {
+  content: "";
+  position: absolute;
+  background: #000;
+  top: 0; left: 100%;
+  width: 15px;
+  height: 100%;
+  opacity: 0;
+  animation: cursorblinking 1s linear infinite;
+  animation-delay: 2.3s;
+}
+
+section.profil-singkat {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 20px;
+}
+
+section.profil-singkat .content-title h2::before {
+  background-color: var(--primary-white);
+  animation: textwriting1 2s steps(19) forwards;
+}
+
+section.profil-singkat .content p {
+  text-align: justify;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+section.profil-singkat .content p::first-letter {
+  padding-left: 25px;
+}
+
+section.profil-singkat aside.content-img {
+  margin-top: 60px;
+}
+
+section.struktur-organisasi {
+  background-color: var(--secondary-lightblue);
+}
+
+section.struktur-organisasi .content-title h2::before {
+  background-color: var(--secondary-lightblue);
+  animation: textwriting1 2s steps(19) forwards;
+}
+
+section.keterampilan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section.keterampilan .content-title,
+section.keterampilan .content-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section.keterampilan .content-title h2 {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section.keterampilan .content-title h2::before {
+  background-color: var(--primary-white);
+  animation: textwriting1 2s steps(12) forwards;
+}
+
+section.keterampilan .content-title h2::after {
+  top: auto;
+  height: 35px;
+}
+
+section.keterampilan p {
+  width: 70%;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+section.keterampilan .cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  padding: 14px 50px;
+}
+
+section.keterampilan .cards .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 10px;
+  border-radius: 12px;
+  box-shadow: #0000001e 0 4px 12px, 
+            #0000001e 0 -2px 4px inset;
+  transition: .3s;
+}
+
+section.keterampilan .card .card-text {
+  display: inline-block;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 20px;
+  font-size: 14px;
+  cursor: default;
+  transition: .3s;
+}
+
+section.keterampilan .card:hover .card-img svg path {
+  fill: var(--primary-white);
+}
+
+section.keterampilan .card:hover .card-text {
+  color: var(--primary-white);
+}
+
+section.keterampilan .card:hover {
+  background-color: var(--secondary-blue);
+  transform: translateY(-4px);
+  box-shadow: #0000002e 0 12px 16px, 
+            #0000001e 0 -2px 4px inset;
+}
+
+
+footer {
+  background-color: var(--secondary-lightblue);
+}
+
+footer * {
+  color: var(--ternary-grey);
+}
+
+footer section.about {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  padding: 100px;
+}
+
+footer section.about .profil .information,
+footer section.about .terkait .item {
+  font-size: 12px;
+}
+
+footer section.about .card-title {
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+footer sectoin.about .card-body {
+  font-size: 13px;
+}
+
+footer section.about .card-body p {
+  margin: 20px 0;
+}
+
+footer section.about .terkait .item strong {
+  display: block;
+  margin-top: 5px;
+}
+
+footer section.about .medsos .items {
+  display: flex;
+  align-items: center;
+}
+
+footer section.about .medsos .item {
+  background-color: var(--primary-white);
+  display: block;
+  font-size: 36px;
+  width: 60px;
+  height: 55px;
+  line-height: 33px;
+  text-align: center;
+  padding: 10px 0;
+  margin: 8px;
+  border-radius: 8px;
+}
+
+footer .medsos .item a {
+  text-decoration: none;
+  transform-origin: center;
+}
+
+footer .medsos .item:hover a {
+  font-size: 42px;
+}
+
+footer .medsos .item i {
+  color: var(--secondary-blue);
+}
+
+footer .copyright {
+  padding: 0 100px;
+  font-size: 12px;
+}
+
+footer .copy-icon {
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+
+@keyframes textwriting1 {
+  from {
+    left: 0;
+  } to {
+    left: 100%;
+  }
+}
+
+@keyframes cursorblinking {
+  0% {
+    opacity: 1;
+  } 50% {
+    opacity: 1;
+  } 100% {
+    opacity: 0;
+  }
+}
